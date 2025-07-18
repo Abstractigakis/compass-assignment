@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Home",
+        "url": "/",
+        "category_type": "non_leaf_navigation",
+        "description": "",
+        "parent_category": null,
+        "subcategories": [],
+        "is_leaf": false,
+        "metadata": {}
+    },
+    {
+        "name": "Photo",
+        "url": null,
+        "category_type": "leaf_service",
+        "description": "",
+        "parent_category": "Home",
+        "subcategories": [],
+        "is_leaf": true,
+        "metadata": {}
+    }
+]

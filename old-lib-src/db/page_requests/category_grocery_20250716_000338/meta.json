@@ -1,0 +1,10 @@
+{
+  "url": "https://www.costco.ca/grocery-household.html",
+  "folder_name": "category_grocery_20250716_000338",
+  "html_filepath": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_grocery_20250716_000338/page.html",
+  "request_folder": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_grocery_20250716_000338",
+  "method": "playwright",
+  "timestamp": "2025-07-16T00:03:46.437283",
+  "content_length": 1044257,
+  "status": "success"
+}

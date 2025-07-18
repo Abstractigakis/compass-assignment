@@ -1,0 +1,32 @@
+[
+    {
+        "name": "$10 monthly credit for Executive Members. Up to a $120 annual value on Same-Day or Costco via Instacart. Eligible on orders $150+. Terms and excl apply.",
+        "url": "/store/costco-canada/pages/10mo-exec-benefit-terms-conditions",
+        "category_type": "leaf_service",
+        "description": "$10 monthly credit for Executive Members. Up to a $120 annual value on Same-Day or Costco via Instacart. Eligible on orders $150+. Terms and excl apply.",
+        "parent_category": null,
+        "subcategories": [],
+        "is_leaf": true,
+        "metadata": {}
+    },
+    {
+        "name": "Warehouse Savings ",
+        "url": "/store/costco-canada/collections/rc-warehouse-savings-p12",
+        "category_type": "non_leaf_navigation",
+        "description": "Warehouse Savings ",
+        "parent_category": null,
+        "subcategories": [],
+        "is_leaf": false,
+        "metadata": {}
+    },
+    {
+        "name": " Now Delivering Alcohol Wine, beer, and more delivered in as fast as 2 hours Shop Now Must be 19+. Enjoy responsibly. Alcohol is available on a separate storefront - clicking here will redirect you",
+        "url": "https://sameday.costco.ca/store/costco-ontario-alcohol/storefront",
+        "category_type": "leaf_service",
+        "description": " Now Delivering Alcohol Wine, beer, and more delivered in as fast as 2 hours Shop Now Must be 19+. Enjoy responsibly. Alcohol is available on a separate storefront - clicking here will redirect you",
+        "parent_category": null,
+        "subcategories": [],
+        "is_leaf": true,
+        "metadata": {}
+    }
+]

@@ -1,0 +1,61 @@
+{
+  "session_id": "session_20250716_003914_f0692ad1",
+  "stats": {
+    "session_id": "session_20250716_003914_f0692ad1",
+    "start_time": "2025-07-16 04:39:14",
+    "end_time": null,
+    "status": "running",
+    "ai_enabled": 1,
+    "categories_found": 2,
+    "products_found": 2,
+    "leaf_categories": 1,
+    "navigation_categories": 1,
+    "avg_product_price": 2199.99,
+    "min_product_price": 1899.99,
+    "max_product_price": 2499.99
+  },
+  "categories": [
+    {
+      "id": 7,
+      "session_id": "session_20250716_003914_f0692ad1",
+      "name": "Test Electronics",
+      "url": "/test-electronics",
+      "category_type": "non_leaf_navigation",
+      "parent_category_id": null,
+      "is_leaf": 0,
+      "level": 0,
+      "path": "Test Electronics",
+      "id_path": "7"
+    },
+    {
+      "id": 8,
+      "session_id": "session_20250716_003914_f0692ad1",
+      "name": "Test Laptops",
+      "url": "/test-laptops",
+      "category_type": "leaf_product",
+      "parent_category_id": 7,
+      "is_leaf": 1,
+      "level": 1,
+      "path": "Test Electronics > Test Laptops",
+      "id_path": "7,8"
+    }
+  ],
+  "root_categories": [
+    {
+      "id": 7,
+      "session_id": "session_20250716_003914_f0692ad1",
+      "name": "Test Electronics",
+      "url": "/test-electronics",
+      "category_type": "non_leaf_navigation",
+      "description": "Test electronics department",
+      "parent_category_id": null,
+      "is_leaf": 0,
+      "level": 0,
+      "path": "Test Electronics",
+      "metadata": "{}",
+      "scraped_at": "2025-07-16 04:39:14",
+      "created_at": "2025-07-16 04:39:14",
+      "updated_at": "2025-07-16 04:39:14"
+    }
+  ]
+}

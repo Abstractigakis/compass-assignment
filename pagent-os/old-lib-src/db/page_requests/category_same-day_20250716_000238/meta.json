@@ -1,0 +1,10 @@
+{
+  "url": "https://memejour.costco.ca/?utm_source=nav",
+  "folder_name": "category_same-day_20250716_000238",
+  "html_filepath": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_same-day_20250716_000238/page.html",
+  "request_folder": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_same-day_20250716_000238",
+  "method": "playwright",
+  "timestamp": "2025-07-16T00:02:49.320676",
+  "content_length": 1233158,
+  "status": "success"
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Grocery & Household",
+        "url": "",
+        "category_type": "non_leaf_navigation",
+        "description": "",
+        "parent_category": null,
+        "subcategories": [],
+        "is_leaf": false,
+        "metadata": {}
+    }
+]

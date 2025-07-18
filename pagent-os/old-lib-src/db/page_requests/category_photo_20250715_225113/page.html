@@ -1,0 +1,26 @@
+<html><head></head><body>
+      <script src="/SJyvQK/_Z-By/77-cz/tjKk/V4iLwwEfb9/J0Y7AQ/MQVTSBtu/HQk7AQ?v=fd1fe117-3412-ee98-1a93-276bd2da173a&amp;t=600108100"></script>
+      <script>
+         (function() {
+             var chlgeId = '';
+             var scripts = document.getElementsByTagName('script');
+             for (var i = 0; i < scripts.length; i++) {
+                 if (scripts[i].src && scripts[i].src.match(/t=([^&#]*)/)) {
+                     chlgeId = scripts[i].src.match(/t=([^&#]*)/)[1];
+                 }
+             }
+             var proxied = window.XMLHttpRequest.prototype.send;
+             window.XMLHttpRequest.prototype.send = function() {
+                 var pointer = this
+                 var intervalId = window.setInterval(function() {
+                     if (pointer.readyState === 4 && pointer.responseURL && pointer.responseURL.indexOf('t=' + chlgeId) > -1) {
+                         location.reload(true);
+                         clearInterval(intervalId);
+                     }
+                 }, 1);
+                 return proxied.apply(this, [].slice.call(arguments));
+             };
+         })();
+      </script>
+   
+</body></html>

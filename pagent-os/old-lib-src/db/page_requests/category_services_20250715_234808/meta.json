@@ -1,0 +1,10 @@
+{
+  "url": "https://www.costco.ca/costco-services.html",
+  "folder_name": "category_services_20250715_234808",
+  "html_filepath": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_services_20250715_234808/page.html",
+  "request_folder": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_services_20250715_234808",
+  "method": "playwright",
+  "timestamp": "2025-07-15T23:48:20.635389",
+  "content_length": 951501,
+  "status": "success"
+}

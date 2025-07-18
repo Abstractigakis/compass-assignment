@@ -1,0 +1,10 @@
+{
+  "url": "https://www.costco.ca/photo.html",
+  "folder_name": "category_photo_20250715_225113",
+  "html_filepath": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_photo_20250715_225113/page.html",
+  "request_folder": "/Users/airx/repos/compass-take-home/lib/db/page_requests/category_photo_20250715_225113",
+  "method": "playwright",
+  "timestamp": "2025-07-15T22:51:20.668305",
+  "content_length": 1187,
+  "status": "success"
+}

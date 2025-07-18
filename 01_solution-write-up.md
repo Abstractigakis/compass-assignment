@@ -77,7 +77,59 @@
 - **Backend**: Node.js API with WebSocket support
 - **Database**: Supabase for user management and configurations
 - **AI Services**: Integration with multiple LLM providers
-- **Deployment**: Vercel for frontend, GCP for backend services
+- **Deployment**: Full GCP stack with Cloud Run and Cloud Build
+
+### GCP Deployment Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Cloud Load Balancer                      │
+├─────────────────────────────────────────────────────────────┤
+│  Cloud Run      │  Cloud Run      │  Cloud Functions       │
+│  (Frontend)     │  (API Gateway)  │  (Scraping Workers)    │
+├─────────────────────────────────────────────────────────────┤
+│  Cloud Storage  │  Firestore     │  BigQuery              │
+│  (Static Files) │  (Metadata)    │  (Analytics)           │
+├─────────────────────────────────────────────────────────────┤
+│            Cloud Pub/Sub (Event Bus)                       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Deployment Strategy
+
+1. **Frontend Deployment**
+
+   - **Cloud Run**: Containerized Next.js app with server-side rendering
+   - **Cloud Build**: Automated CI/CD pipeline triggered by GitHub commits
+   - **Cloud CDN**: Global content delivery for static assets
+   - **Cloud Storage**: Hosting for images and static files
+
+2. **Backend Services**
+
+   - **Cloud Run**: RESTful API services with auto-scaling
+   - **Cloud Functions**: Event-driven scraping workers
+   - **Cloud Scheduler**: Cron jobs for periodic scraping tasks
+   - **Secret Manager**: Secure storage for API keys and credentials
+
+3. **Data Layer**
+
+   - **Firestore**: Real-time database for user data and configurations
+   - **BigQuery**: Data warehouse for analytics and large-scale queries
+   - **Cloud Storage**: Raw HTML storage and extraction function archives
+   - **Cloud SQL**: Optional relational database for structured data
+
+4. **AI & Processing**
+
+   - **Vertex AI**: Model hosting and inference
+   - **Cloud AI Platform**: Custom model training and deployment
+   - **Cloud Vision API**: OCR and image analysis capabilities
+   - **Cloud Natural Language API**: Text analysis and entity extraction
+
+5. **Monitoring & Operations**
+   - **Cloud Monitoring**: Application performance monitoring
+   - **Cloud Logging**: Centralized log aggregation
+   - **Cloud Trace**: Distributed tracing for debugging
+   - **Cloud Error Reporting**: Automatic error detection and alerting
 
 ### User Workflow
 
@@ -88,30 +140,36 @@ Deploy to Pagent-OS → Monitor & Auto-Heal → Extract Data
 
 This creates a **no-code/low-code** experience where users can scrape any website without writing extraction code manually.
 
-## Event-Driven Architecture on GCP
+## Full GCP Event-Driven Architecture
 
-This system should be redesigned as an **event-driven architecture** with a central event bus:
+The complete system leverages GCP's serverless and managed services for a robust, scalable deployment:
 
-### Architecture Components
+### Core GCP Services
 
+- **Cloud Run**: Containerized microservices with auto-scaling
+- **Cloud Functions**: Event-driven scraping workers
 - **Cloud Pub/Sub**: Central event bus for decoupled communication
-- **Cloud Functions**: Serverless scraping workers triggered by events
-- **Cloud Run**: Container-based services for AI processing
-- **Firestore**: NoSQL database for flexible schema storage
-- **BigQuery**: Data warehouse for analytics and querying
+- **Cloud Build**: CI/CD pipeline for automated deployments
+- **Cloud Storage**: Raw data and static file storage
+- **Firestore**: Real-time NoSQL database
+- **BigQuery**: Data warehouse for analytics
+- **Cloud Load Balancer**: Global traffic distribution
 
-### Event Flow
+### Event Flow Architecture
 
 ```
-URL Discovery → Pub/Sub → Scraping Workers → AI Processing → Storage → API
+User Request → Cloud Run (Dashboard) → Pub/Sub → Cloud Functions (Scraping)
+→ AI Processing → Firestore/BigQuery → Real-time Updates
 ```
 
-**Benefits:**
+### Deployment Benefits
 
-- Horizontal scaling of scraping workers
-- Fault tolerance through message queuing
-- Real-time processing and updates
-- Cost-effective serverless compute
+- **Auto-scaling**: Pay-per-use serverless compute
+- **Global Distribution**: Multi-region deployment for low latency
+- **Fault Tolerance**: Built-in redundancy and failover
+- **Security**: Identity and Access Management (IAM) integration
+- **Cost Optimization**: Serverless pricing model
+- **Monitoring**: Comprehensive observability stack
 
 ## The Key Idea: Self-Healing ETL Dashboard
 
@@ -144,9 +202,9 @@ The `old-lib-src` solution represents a **sophisticated approach** to web scrapi
 
 1. **Systematic Foundation** - Pagent provides reliable, organized scraping
 2. **AI-Powered Adaptation** - Dynamic extraction functions that adapt to changing sites
-3. **Event-Driven Scalability** - GCP architecture for production deployment
+3. **Full GCP Deployment** - Serverless architecture with auto-scaling and global distribution
 4. **Self-Healing Vision** - The ultimate goal of autonomous ETL that adapts to endpoint drift
 
-This architecture solves the fundamental challenge: **creating resilient data pipelines that survive the ever-changing web**.
+This architecture solves the fundamental challenge: **creating resilient data pipelines that survive the ever-changing web** while leveraging Google Cloud's enterprise-grade infrastructure for production deployment.
 
 ![alt text](image.png)
